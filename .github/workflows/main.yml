@@ -1,0 +1,12 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  job-name:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v5
+     - uses: ./
+       with:
+         token: ${{ secrets.DOCKER_TOKEN }}
+         username: ${{ vars.DOCKER_USERNAME }}
